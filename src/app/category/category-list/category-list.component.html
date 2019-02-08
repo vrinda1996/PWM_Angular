@@ -1,0 +1,51 @@
+<!--<table class="table">
+  <thead>
+    <tr>
+      <th>MCCode</th>
+      <th>MCName</th>
+      <th>CategoryName</th>
+      <th>SubCategoryName</th>
+      <th>isMCActive</th>
+      
+     </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let category of categoryList">
+        <td>{{category.mcCode}}</td>
+        <td>{{category.mcName}}</td>
+        <td>{{category.categoryName}}</td>
+        <td>{{category.subCategoryName}}</td>
+        <td>{{category.isMCActive}}</td>
+        
+    </tr>
+  </tbody>
+</table>
+-->
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="mcCode">
+      <th mat-header-cell *matHeaderCellDef> MC-Code </th>
+      <td mat-cell *matCellDef="let category"> {{category.mcCode}} </td>
+    </ng-container>
+    <ng-container matColumnDef="mcName">
+      <th mat-header-cell *matHeaderCellDef> MC-Name </th>
+      <td mat-cell *matCellDef="let category"> {{category.mcName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="categoryName">
+      <th mat-header-cell *matHeaderCellDef> Category Name </th>
+      <td mat-cell *matCellDef="let category"> {{category.categoryName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="subCategoryName">
+      <th mat-header-cell *matHeaderCellDef> SubCategory Name </th>
+      <td mat-cell *matCellDef="let category"> {{category.subCategoryName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="isMCActive">
+      <th mat-header-cell *matHeaderCellDef> isMCActive </th> 
+      <td mat-cell *matCellDef="let category"> {{category.isMCActive}} </td>  
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="mchTableColumns"></tr>
+      <tr mat-row *matRowDef="let myRowData; columns: mchTableColumns"></tr>
+  </table>
+  <!--<mat-paginator [length]="40" [pageSize]="15" [pageSizeOptions]="[15, 30, 45]">
+  </mat-paginator>-->
+</div>
