@@ -19,11 +19,10 @@ export class CategoryListComponent implements OnInit {
   constructor(private router: Router, private categoryService: CategoryService) {
     
    }
-  ngAfterViewInit() {
-    this.dataSource.paginator = this.mchPaginator;
-  }
+  
   ngOnInit()
   {
+    this.dataSource.paginator = this.mchPaginator;
   }
 
 }
