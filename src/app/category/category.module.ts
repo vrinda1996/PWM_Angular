@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { MatTableModule } from  '@angular/material';
+import { MatTableModule,MatPaginatorModule } from  '@angular/material';
 import { CategoryRoutingModule } from './category-routing.module';
 import { CategoryListComponent } from './category-list/category-list.component';
 
@@ -9,7 +9,8 @@ import { CategoryListComponent } from './category-list/category-list.component';
   imports: [
     CommonModule,
     CategoryRoutingModule,
-    MatTableModule
+    MatTableModule,
+    MatPaginatorModule
   ]
 })
 export class CategoryModule { }

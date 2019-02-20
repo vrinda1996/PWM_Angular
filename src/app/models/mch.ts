@@ -1,4 +1,4 @@
-export class mch
+export interface mch
 {
     mcCode:string;
     mcName: string;

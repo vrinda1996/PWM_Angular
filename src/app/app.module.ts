@@ -6,8 +6,9 @@ import { AppComponent } from './app.component';
 import { CategoryListComponent } from './category/category-list/category-list.component';
 import {HttpClientModule,HttpClient } from '@angular/common/http';
 import {CategoryService} from './category/category.service';
-import { MatTableModule } from  '@angular/material';
+import { MatTableModule,MatPaginatorModule, MatFormFieldModule,MatInputModule } from  '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     HttpClientModule,
     AppRoutingModule,
     MatTableModule,
-    BrowserAnimationsModule
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FlexLayoutModule
   ],
   providers: [CategoryService],
   bootstrap: [AppComponent]
