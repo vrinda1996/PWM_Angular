@@ -1,47 +1,181 @@
-<div class="container">
- 
-  <ul class="nav nav-tabs"  role="tablist">
-      <!-- <ul class="nav-item">
-        <a class="nav-link active" data-toggle="tab" [routerLink]="['/create']">Create</a>
-      </ul> -->
-      <ul class="nav-item">
-          <a class="nav-link" data-toggle="tab"  [routerLink]="['/masterData']">Master Data</a>
-                <ul class="nav-item">
-                  <a class="nav-link" data-toggle="tab"  [routerLink]="['/userMaster']">User Master</a>
-                </ul>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/proposalManagment']">Proposal Management</a>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/promotionInitiation']">Promotion Initiation</a>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/promotionModification']">Promotion Modification</a>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/promotionApproval']">Promotion Approval</a>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/promotionExecution']">Promotion Execution</a>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/promotionCommunication']">Promotion Communication</a>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/reports']">Reports</a>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/vistex']">Vistex</a>
-      </ul>
-      <ul class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/sapLogin']">SAP LOGIN</a>
-      </ul>  
-    </ul>   
-  
-  <div class="card bg-light p-3">   
-      
-<router-outlet></router-outlet>
-  </div>
+<div class="header-div">
+  <img width="1280px" style="opacity:0.8" src="../../../assets/images/header_bg.jpg">
+  <h1 class="header">
+    Welcome to PWM!
+  </h1>
+  <img class="pwm-image" src="../../../assets/images/promotion_workflow_logo.png"> 
+  <img class="future-group-image" src="../../../assets/images/fglogo.gif"> 
+</div>
 
-</div>    
+<div class="btn-group" dropdown>
+  <button id="Master-Data" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+          Master Data 
+          <span class="caret"></span>
+  </button>
+  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+      role="menu" aria-labelledby="button-basic">
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+    <li class="divider dropdown-divider"></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+    </li>
+  </ul>
+</div>
+
+<div class="btn-group" dropdown>
+<button id="User-Master" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+  User Master <span class="caret"></span>
+</button>
+<ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+role="menu" aria-labelledby="button-basic">
+<li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+<li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+<li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+<li class="divider dropdown-divider"></li>
+<li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+</li>
+</ul>
+</div>
+
+
+
+<div class="btn-group" dropdown>
+  <button id="Proposal-Management" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+    Proposal Management<span class="caret"></span>
+  </button>
+  <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+  role="menu" aria-labelledby="button-basic">
+  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+  <li class="divider dropdown-divider"></li>
+  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+  </li>
+  </ul>
+  </div>
+ 
+  
+  <div class="btn-group" dropdown>
+    <button id="Promotion-Initiation" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+      Promotion Initiation <span class="caret"></span>
+    </button>
+    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+    role="menu" aria-labelledby="button-basic">
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+    <li class="divider dropdown-divider"></li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+    </li>
+    </ul>
+    </div>
+  
+    
+    <div class="btn-group" dropdown>
+      <button id="Promotion-Modification" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+        Promotion Modification <span class="caret"></span>
+      </button>
+      <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+      role="menu" aria-labelledby="button-basic">
+      <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+      <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+      <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+      <li class="divider dropdown-divider"></li>
+      <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+      </li>
+      </ul>
+      </div>
+      
+
+      <div class="btn-group" dropdown>
+        <button id="Promotion-Approval" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+          Promotion Approval<span class="caret"></span>
+        </button>
+        <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+        role="menu" aria-labelledby="button-basic">
+        <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+        <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+        <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+        <li class="divider dropdown-divider"></li>
+        <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+        </li>
+        </ul>
+        </div>
+        
+        <div class="btn-group" dropdown>
+          <button id="Promotion-Execution" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+            Promotion Execution<span class="caret"></span>
+          </button>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+          </li>
+          </ul>
+          </div>
+
+          
+        <div class="btn-group" dropdown>
+          <button id="Promotion-Communication" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+            Promotion Communication<span class="caret"></span>
+          </button>
+          <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+          role="menu" aria-labelledby="button-basic">
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+          <li class="divider dropdown-divider"></li>
+          <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+          </li>
+          </ul>
+          </div>
+
+          <div class="btn-group" dropdown>
+            <button id="Reports" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+              Reports<span class="caret"></span>
+            </button>
+            <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+            role="menu" aria-labelledby="button-basic">
+              <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+              <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+              <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+              <li class="divider dropdown-divider"></li>
+              <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+              </li>
+            </ul>
+            </div>
+
+
+            <div class="btn-group" dropdown>
+              <button id="Vistex" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+                Vistex<span class="caret"></span>
+              </button>
+              
+              <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+              role="menu" aria-labelledby="button-basic">
+                <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+                <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+                <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+                <li class="divider dropdown-divider"></li>
+                <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+                </li>
+              </ul>
+            </div>
+
+              <div class="btn-group" dropdown>
+                <button id="SAP-Login" dropdownToggle type="button" class="btn btn-primary dropdown-toggle" aria-controls="dropdown-basic">
+                  SAP Login<span class="caret"></span>
+                </button>
+                <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-basic">
+                  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Action</a></li>
+                  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Another action</a></li>
+                  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Something else here</a></li>
+                  <li class="divider dropdown-divider"></li>
+                  <li role="menuitem"><a class="dropdown-item" [routerLink]="['/sapLogin']">Separated link</a>
+                  </li>
+                </ul>
+              </div>
