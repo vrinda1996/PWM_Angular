@@ -1,0 +1,24 @@
+.header-div{
+    text-align:center;
+    position: relative
+}
+.header {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+.pwm-image{
+    position: absolute;
+    top: 20%;
+    left: 15%;
+    transform: translate(-100%, -20%);
+}
+.future-group-image{
+    position: absolute;
+    top: 20%;
+    left: 95%;
+    width: 10%;
+    height: 40%;
+    transform: translate(-100%, -20%);
+}

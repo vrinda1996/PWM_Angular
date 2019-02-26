@@ -1,23 +1,184 @@
-<div class="container">
- 
-  <ul class="nav nav-tabs"  role="tablist">
-      <!-- <li class="nav-item">
-        <a class="nav-link active" data-toggle="tab" [routerLink]="['/create']">Create</a>
-      </li> -->
+<div class="header-div">
+  <img width="1280px" style="opacity:0.8" src="../../../assets/images/header_bg.jpg">
+  <h1 class="header">
+    Welcome to PWM!
+  </h1>
+  <img class="pwm-image" src="../../../assets/images/promotion_workflow_logo.png"> 
+  <img class="future-group-image" src="../../../assets/images/fglogo.gif"> 
+</div>
+  <!--<ul class="nav nav-tabs"  role="tablist">
       <li class="nav-item">
-          <a class="nav-link" data-toggle="tab"  [routerLink]="['/categoryList']">Category List</a>
+          <a class="nav-link" data-toggle="tab" [routerLink]="['/categoryList']">Category List</a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" data-toggle="tab"  [routerLink]="['/delete']">Delete</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" data-toggle="tab" [routerLink]="['/update']">Update</a>
-      </li> -->
-  </ul>   
-  
-  <div class="card bg-light p-3">   
-      
-<router-outlet></router-outlet>
-  </div>
-
-</div>    
+  </ul> -->  
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+    Master Data<span class="caret"></span>
+  </button>
+  <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
+    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+      <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">User Master<span class="caret"></span></a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Creation</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Search</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">User-MCH</a></li>
+      </ul>
+    </li>
+    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+      <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Organization<span class="caret"></span></a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Organization Master</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">LSMW Master</a></li>
+      </ul>
+    </li>
+    <li role="menuitem"><a class="dropdown-item" [routerLink]="['/categoryList']">Category Master</a></li>
+    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+      <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Role Master<span class="caret"></span></a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Role Creation</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Role and Profile Mapping</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Profile Setting</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">User Type Creation</a></li>
+      </ul>
+    </li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Workflow Master</a></li>
+    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+      <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Other Master<span class="caret"></span></a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Campaign</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Marketting Type</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Reason Of Rejection</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Problem Type</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Promotion Type</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Task Type</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Zone</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Calender</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Objective</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Department</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Store-Proposal Pending Report</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Offer Applicable For</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Addition of Tax</a></li>
+      </ul>
+    </li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Lead Time Configuration</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Lead Time by MC</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Broadcast Message</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Vistex Master</a></li>
+  </ul>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+    Proposal Management<span class="caret"></span>
+  </button>
+  <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
+    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+      <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Promotion Proposal<span class="caret"></span></a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Create</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">View/Modify</a></li>
+      </ul>
+    </li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Article Download</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">MC Wise Approver</a></li>
+  </ul>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+    Promotion Initiation<span class="caret"></span>
+  </button>
+  <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
+    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+      <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Create<span class="caret"></span></a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Initiate Promotion</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Create Promotion Initiation</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Create Sub Promotion Initiation Using File</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Organization Group</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Conflict Resolution</a></li>
+      </ul>
+    </li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">View/Modify</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Article Download</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">MC Wise Approver</a></li>
+  </ul>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+    Promotion Modification<span class="caret"></span>
+  </button>
+  <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Promotion Date Change</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Article/MC Addition</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Article/MC Removal</a></li>
+  </ul>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+    Promotion Approval<span class="caret"></span>
+  </button>
+  <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Level 1</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Level 2</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Business Exigency</a></li>
+  </ul>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+    Promotion Execution<span class="caret"></span>
+  </button>
+  <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
+    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+      <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Execute Management<span class="caret"></span></a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Workbench</a></li>
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Dashboard</a></li>
+      </ul>
+    </li>
+    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+      <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Promotion Set-Up<span class="caret"></span></a>
+      <ul *dropdownMenu class="dropdown-menu" role="menu">
+        <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Workbench</a></li>
+        <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+          <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">Internal Task<span class="caret"></span></a>
+          <ul *dropdownMenu class="dropdown-menu" role="menu">
+            <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Creation</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Inward Task</a></li>
+            <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Outward Task</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+    Promotion Communication<span class="caret"></span>
+  </button>
+  <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Promotion Communication</a></li>
+  </ul>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+    Reports<span class="caret"></span>
+  </button>
+  <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Promo Life Cycle-Article and Mc Level</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Store Proposal</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Promo Life Cycle</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Consolidated Report</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Vendor Backed Promo Report</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">Integrated Report</a></li>
+    <li role="menuitem"><a class="dropdown-item" href="#/dropdowns#nested">User MCH Mapping Report</a></li>
+  </ul>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" type="button" class="btn " aria-controls="dropdown-nested">
+    Vistex<span class="caret"></span>
+  </button>
+</div>
+<div class="btn-group" dropdown [autoClose]="true" container="body">
+  <button id="button-nested" type="button" class="btn" aria-controls="dropdown-nested">
+    SAP Login<span class="caret"></span>
+  </button>
+</div>

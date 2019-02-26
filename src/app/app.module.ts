@@ -9,6 +9,8 @@ import {CategoryService} from './category/category.service';
 import { MatTableModule,MatPaginatorModule, MatFormFieldModule,MatInputModule } from  '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AppComponent
   ],
   imports: [
+    BsDropdownModule.forRoot(),
     BrowserModule,
     ReactiveFormsModule,
     FormsModule,
