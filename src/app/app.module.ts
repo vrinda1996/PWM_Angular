@@ -10,12 +10,16 @@ import { MatTableModule,MatPaginatorModule, MatFormFieldModule,MatInputModule } 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { SearchUserComponent } from './search-user/search-user.component';
+import { CreateUserComponent } from './User Master/create-user/create-user.component';
 
 
 @NgModule({
   declarations: [
     CategoryListComponent,
-    AppComponent
+    AppComponent,
+    SearchUserComponent,
+    CreateUserComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),
