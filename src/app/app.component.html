@@ -6,13 +6,9 @@
   <img class="pwm-image" src="../../../assets/images/promotion_workflow_logo.png"> 
   <img class="future-group-image" src="../../../assets/images/fglogo.gif"> 
 </div>
-  <!--<ul class="nav nav-tabs"  role="tablist">
-      <li class="nav-item">
-          <a class="nav-link" data-toggle="tab" [routerLink]="['/categoryList']">Category List</a>
-      </li>
-  </ul> -->  
+  
 <div class="btn-group" dropdown [autoClose]="true" container="body">
-  <button id="button-nested" dropdownToggle type="button" class="btn dropdown-toggle" aria-controls="dropdown-nested">
+  <button id="button-nested" dropdownToggle type="button" class="btn btn-default dropdown-toggle" aria-controls="dropdown-nested">
     Master Data<span class="caret"></span>
   </button>
   <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
@@ -182,3 +178,6 @@
     SAP Login<span class="caret"></span>
   </button>
 </div>
+
+
+<app-create-user></app-create-user>

@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {ReactiveFormsModule,FormsModule} from '@angular/forms';
+import { ReactiveFormsModule,FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoryListComponent } from './Master Data/category/category-list/category-list.component';
 import {HttpClientModule,HttpClient } from '@angular/common/http';
 import {CategoryService} from './Master Data/category/category.service';
-import { MatTableModule,MatPaginatorModule, MatFormFieldModule,MatInputModule } from  '@angular/material';
+import { MatTableModule,MatPaginatorModule, MatFormFieldModule,MatInputModule,MatRadioModule } from  '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
@@ -143,6 +143,7 @@ import { OutwardTaskComponent } from './Promotion Execution/Promotion Set-up/Int
     BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
+    MatRadioModule,
     FlexLayoutModule
   ],
   providers: [CategoryService],

@@ -1,0 +1,6 @@
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+  }
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+    color: #3a2f2f;
+}
