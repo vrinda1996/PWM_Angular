@@ -1,12 +1,11 @@
   <h2>Personal Details</h2>
 
 <form [formGroup]="employeeForm"  (ngSubmit)="onSubmit()">
-<p>
+
     <mat-form-field appearance="outline">
         <mat-label>Existing Employee Name:</mat-label>
         <input matInput placeholder="Existing Employee Name" formControlName="existingEmployeeName">
     </mat-form-field>        
-</p>  
   <mat-form-field appearance="outline">
       <mat-label>Employee Code:</mat-label>
       <input matInput placeholder="Employee Code" formControlName="employeeCode">
