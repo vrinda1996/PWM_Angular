@@ -37,6 +37,10 @@ import { LeadTimeConfigurationComponent } from './Lead Time/lead-time-configurat
 import { LeadTimeByTimeComponent } from './Lead Time/lead-time-by-time/lead-time-by-time.component';
 import { BroadcastMessageComponent } from './Broadcast Message/broadcast-message/broadcast-message.component';
 import { VistexMasterComponent } from './Vistex Master/vistex-master/vistex-master.component';
+import { CreateComponent } from './Proposal Management/Promotion Proposal/create/create.component';
+import { ViewModifyComponent } from './Proposal Management/Promotion Proposal/view-modify/view-modify.component';
+import { ArticleDownloadComponent } from './Proposal Management/Article Download/article-download/article-download.component';
+import { McWiseApproverComponent } from './Proposal Management/MC Wise Approver/mc-wise-approver/mc-wise-approver.component';
 
 
 @NgModule({
@@ -69,7 +73,11 @@ import { VistexMasterComponent } from './Vistex Master/vistex-master/vistex-mast
     LeadTimeConfigurationComponent,
     LeadTimeByTimeComponent,
     BroadcastMessageComponent,
-    VistexMasterComponent
+    VistexMasterComponent,
+    CreateComponent,
+    ViewModifyComponent,
+    ArticleDownloadComponent,
+    McWiseApproverComponent
   ],
   imports: [
     BsDropdownModule.forRoot(),
