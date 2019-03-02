@@ -9,9 +9,30 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class CreateUserComponent implements OnInit {
 
+  employeeForm = new FormGroup({
+    existingEmployeeName: new FormControl(''),
+    employeeCode: new FormControl(''),
+    employeeName: new FormControl(''),
+    contactNumber: new FormControl(''),
+    emailAddress: new FormControl(''),
+  });
+  organizationForm = new FormGroup({
+    organizationType: new FormControl(''),
+    siteDescription: new FormControl(''),
+    format: new FormControl(''),
+    city: new FormControl(''),
+    region: new FormControl(''),
+    location: new FormControl(''),
+    zone: new FormControl(''),
+  });
   constructor() { }
 
   ngOnInit() {
   }
+
+  onSubmit() {
+    console.warn(this.employeeForm.value);
+  }
+
 
 }
