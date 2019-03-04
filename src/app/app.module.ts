@@ -42,7 +42,7 @@ import { ViewModifyComponent } from './Proposal Management/Promotion Proposal/vi
 import { ArticleDownloadComponent } from './Proposal Management/Article Download/article-download/article-download.component';
 import { McWiseApproverComponent } from './Proposal Management/MC Wise Approver/mc-wise-approver/mc-wise-approver.component';
 import { InitiatePromotionComponent } from './Promotion Initiation/Create/initiate-promotion/initiate-promotion.component';
-import { CreatePromotionInitiationComponent } from './Promotion Initiation/Create/initiate-promotion/create-promotion-initiation/create-promotion-initiation.component';
+import { CreatePromotionInitiationComponent } from './Promotion Initiation/Create/create-promotion-initiation/create-promotion-initiation.component';
 import { CreateSubPromoUsingFileComponent } from './Promotion Initiation/Create/create-sub-promo-using-file/create-sub-promo-using-file.component';
 import { OrganizationGroupComponent } from './Promotion Initiation/Create/organization-group/organization-group.component';
 import { ConflictResolutionComponent } from './Promotion Initiation/Create/conflict-resolution/conflict-resolution.component';
@@ -54,7 +54,7 @@ import { Level2Component } from './Promotion Approval/level2/level2.component';
 import { BusinessExigencyComponent } from './Promotion Approval/business-exigency/business-exigency.component';
 import { WorkbenchComponent } from './Promotion Execution/Execute Management/workbench/workbench.component';
 import { DashboardComponent } from './Promotion Execution/Execute Management/dashboard/dashboard.component';
-import { PromoCommunicationComponent } from './promo-communication/promo-communication.component';
+import { PromoCommunicationComponent } from './Promotion Communication/promo-communication/promo-communication.component';
 import { PromoLifeCycleArticleMcLevelComponent } from './Reports/promo-life-cycle-article-mc-level/promo-life-cycle-article-mc-level.component';
 import { StoreProposalComponent } from './Reports/store-proposal/store-proposal.component';
 import { PromoLifeCycleComponent } from './Reports/promo-life-cycle/promo-life-cycle.component';

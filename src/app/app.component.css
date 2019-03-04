@@ -1,6 +1,6 @@
 .header-div{
     text-align:center;
-    position: relative
+    position: relative;
 }
 .header {
     position: absolute;
@@ -8,6 +8,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+.header_bg_color{
+    background-color: teal;
+}
 .pwm-image{
     position: absolute;
     top: 20%;
@@ -23,5 +26,5 @@
     transform: translate(-100%, -20%);
 }
 .mat-form-field-appearance-outline .mat-form-field-outline-thick {
-    color: #3a2f2f;
+    color: #3a2f2f;  
 }
