@@ -1,27 +1,27 @@
 <div class="mat-elevation-z8">
-  <table mat-table [dataSource]="dataSource">
+  <mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="mcCode">
-      <th mat-header-cell *matHeaderCellDef> MC-Code </th>
-      <td mat-cell *matCellDef="let category"> {{category.mcCode}} </td>
+      <mat-header-cell *matHeaderCellDef> MC-Code </mat-header-cell>
+      <mat-cell *matCellDef="let category"> {{category.mcCode}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="mcName">
-      <th mat-header-cell *matHeaderCellDef> MC-Name </th>
-      <td mat-cell *matCellDef="let category"> {{category.mcName}} </td>
+      <mat-header-cell *matHeaderCellDef> MC-Name </mat-header-cell>
+      <mat-cell *matCellDef="let category"> {{category.mcName}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="categoryName">
-      <th mat-header-cell *matHeaderCellDef> Category Name </th>
-      <td mat-cell *matCellDef="let category"> {{category.categoryName}} </td>
+      <mat-header-cell *matHeaderCellDef> Category Name </mat-header-cell>
+      <mat-cell *matCellDef="let category"> {{category.categoryName}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="subCategoryName">
-      <th mat-header-cell *matHeaderCellDef> SubCategory Name </th>
-      <td mat-cell *matCellDef="let category"> {{category.subCategoryName}} </td>
+      <mat-header-cell *matHeaderCellDef> SubCategory Name </mat-header-cell>
+      <mat-cell *matCellDef="let category"> {{category.subCategoryName}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="isMCActive">
-      <th mat-header-cell *matHeaderCellDef> isMCActive </th> 
-      <td mat-cell *matCellDef="let category"> {{category.isMCActive}} </td>  
+      <mat-header-cell *matHeaderCellDef> isMCActive </mat-header-cell> 
+      <mat-cell *matCellDef="let category"> {{category.isMCActive}} </mat-cell>  
     </ng-container>
-    <tr mat-header-row *matHeaderRowDef="mchTableColumns"></tr>
-      <tr mat-row *matRowDef="let myRowData; columns: mchTableColumns"></tr>
-  </table>
+    <mat-header-row *matHeaderRowDef="mchTableColumns"></mat-header-row>
+      <mat-row *matRowDef="let myRowData; columns: mchTableColumns"></mat-row>
+  </mat-table>
   <mat-paginator #paginator [pageSizeOptions]="pageSizeOptions" showFirstLastButtons></mat-paginator>
 </div>
