@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CategoryListComponent } from './Master Data/category/category-list/category-list.component';
 import {HttpClientModule,HttpClient } from '@angular/common/http';
-import {CategoryService} from './Master Data/category/category.service';
+import { CategoryService} from './Master Data/category/category.service';
 import { MatTableModule,MatPaginatorModule, MatFormFieldModule,MatInputModule,MatRadioModule } from  '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -14,6 +14,7 @@ import { SearchUserComponent } from './Master Data/User Master/search-user/searc
 import { CreateUserComponent } from './Master Data/User Master/create-user/create-user.component';
 import { UserMchComponent } from './Master Data/User Master/user-mch/user-mch.component';
 import { OrganizationMasterComponent } from './Master Data/Organization/organization-master/organization-master.component';
+import { OrganizationMasterService} from './Master Data/Organization/organization-master/organization-master.service';
 import { LSMWMasterComponent } from './Master Data/Organization/lsmwmaster/lsmwmaster.component';
 import { RoleCreationComponent } from './Master Data/Role Master/role-creation/role-creation.component';
 import { RoleAndProfileMappingComponent } from './Master Data/Role Master/role-and-profile-mapping/role-and-profile-mapping.component';

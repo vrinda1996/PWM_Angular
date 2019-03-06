@@ -2,7 +2,7 @@ import { Component, OnInit , ViewChild, NgModule} from '@angular/core';
 import {mch} from '../../../models/mch';
 import {CategoryService} from '../category.service';
 import { Router } from '@angular/router';
-import {MatPaginator,MatTableDataSource,MatFormFieldModule, MatInputModule} from '@angular/material';
+import {MatPaginator,MatTableDataSource} from '@angular/material';
 
 @Component({
   selector: 'app-category-list',
