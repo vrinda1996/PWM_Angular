@@ -8,6 +8,7 @@ import {HttpClientModule,HttpClient } from '@angular/common/http';
 import { CategoryService} from './Master Data/category/category.service';
 import { MatTableModule,MatPaginatorModule, MatFormFieldModule,MatInputModule,MatRadioModule } from  '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { SearchUserComponent } from './Master Data/User Master/search-user/search-user.component';
@@ -145,6 +146,7 @@ import { OutwardTaskComponent } from './Promotion Execution/Promotion Set-up/Int
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
+    MatButtonModule,
     FlexLayoutModule
   ],
   providers: [CategoryService],
