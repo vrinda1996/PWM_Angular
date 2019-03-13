@@ -14,28 +14,41 @@
 
   </li> 
 <li class="mat-form-field--inline">
+  
   <mat-form-field appearance="outline">
       <mat-label>Employee Code:</mat-label>
       <input matInput placeholder="Employee Code" formControlName="employeeCode">
-  </mat-form-field>        
+  </mat-form-field>
 
+  <mat-form-field appearance="outline">
+    <mat-label>Reporting To:</mat-label>
+    <input matInput placeholder="Reporting To" formControlName="reportingTo">
+</mat-form-field>        
+</li>
+<li class="mat-form-field--inline">
   <mat-form-field appearance="outline">
       <mat-label>Employee Name:</mat-label>
       <input matInput placeholder="Employee Name" formControlName="employeeName">
   </mat-form-field> 
-</li>
-  <li  class="mat-form-field--inline">
+
   <mat-form-field appearance="outline">
       <mat-label>Contact Number:</mat-label>
       <input matInput placeholder="Contact Number" formControlName="contactNumber">
   </mat-form-field>        
 
+  <mat-radio-group style="margin-left: 25px"> 
+    <mat-radio-button value="unblock">Unblock</mat-radio-button>
+    <mat-radio-button value="block">Block</mat-radio-button>
+  </mat-radio-group>
+
+</li>
+<li class="mat-form-field--inline">
   <mat-form-field appearance="outline">
       <mat-label>Email Address:</mat-label>
       <input matInput placeholder="Email Address" formControlName="emailAddress">
   </mat-form-field>        
   </li>
-  <button  mat-raised-button class="submitButton" color="primary" type="submit">Submit</button>
+  <!-- <button  mat-raised-button class="submitButton" color="primary" type="submit">Submit</button> -->
 
 </ol>
 </form>
@@ -86,7 +99,7 @@
             <input matInput placeholder="Zone" formControlName="zone">
         </mat-form-field>        
     </li>
-    <button  mat-raised-button class="submitButton" color="primary" type="submit">Submit</button>
+    <!-- <button  mat-raised-button class="submitButton" color="primary" type="submit">Submit</button> -->
   </ol>
   </form>
   
