@@ -9,7 +9,7 @@ import {mch} from '../../models/mch';
 export class CategoryService {
 
   constructor(private http:HttpClient) { }
-  private categoryUrl = 'http://localhost:8080/categoryApi/category';
+  private categoryUrl = 'http://localhost:8082/categoryApi/category';
 
   public getCategoryList() {
     return this.http.get<mch[]>(this.categoryUrl);

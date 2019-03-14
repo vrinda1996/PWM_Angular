@@ -1,3 +1,47 @@
-<p>
-  organization-master works!
-</p>
+<div class="mat-elevation-z8">
+  <mat-table [dataSource]="dataSource">
+    <ng-container matColumnDef="zoneName">
+      <mat-header-cell *matHeaderCellDef> Zone </mat-header-cell>
+      <mat-cell *matCellDef="let org"> {{org.zoneName}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="state">
+      <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
+      <mat-cell *matCellDef="let org"> {{org.state}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="region">
+      <mat-header-cell *matHeaderCellDef> Region </mat-header-cell>
+      <mat-cell *matCellDef="let org"> {{org.region}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="city">
+      <mat-header-cell *matHeaderCellDef> City </mat-header-cell>
+      <mat-cell *matCellDef="let org"> {{org.city}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="storeId">
+      <mat-header-cell *matHeaderCellDef> Site Code </mat-header-cell> 
+      <mat-cell *matCellDef="let org"> {{org.storeID}} </mat-cell>  
+    </ng-container>
+    <ng-container matColumnDef="storeDesc">
+      <mat-header-cell *matHeaderCellDef> Site Description </mat-header-cell> 
+      <mat-cell *matCellDef="let org"> {{org.storeDesc}} </mat-cell>  
+    </ng-container>
+    <ng-container matColumnDef="location">
+      <mat-header-cell *matHeaderCellDef> Location </mat-header-cell> 
+      <mat-cell *matCellDef="let org"> {{org.locationName}} </mat-cell>  
+    </ng-container>
+    <ng-container matColumnDef="storeClass">
+      <mat-header-cell *matHeaderCellDef> Store Class </mat-header-cell> 
+      <mat-cell *matCellDef="let org"> {{org.storeClass}} </mat-cell>  
+    </ng-container>
+    <ng-container matColumnDef="format">
+      <mat-header-cell *matHeaderCellDef> Format </mat-header-cell> 
+      <mat-cell *matCellDef="let org"> {{org.format}} </mat-cell>  
+    </ng-container>
+    <ng-container matColumnDef="isStoreBlocked">
+      <mat-header-cell *matHeaderCellDef> Status </mat-header-cell> 
+      <mat-cell *matCellDef="let org"> {{org.isStoreBlocked}} </mat-cell>  
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="orgTableColumns"></mat-header-row>
+      <mat-row *matRowDef="let myRowData; columns: orgTableColumns"></mat-row>
+  </mat-table>
+  <mat-paginator #paginator [pageSizeOptions]="pageSizeOptions" showFirstLastButtons></mat-paginator>
+</div>

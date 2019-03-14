@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { org } from '../../../models/org';
+import { mstStore } from '../../../models/mstStore';
 
 @Injectable({
   providedIn: 'root'
@@ -8,9 +8,9 @@ import { org } from '../../../models/org';
 export class OrganizationMasterService {
 
   constructor(private http:HttpClient) { }
-  private orgUrl = 'http://localhost:8080/organizationApi/orgList';
+  private orgUrl = 'http://localhost:8082/organizationApi/orgList';
 
   public getOrgList() {
-    return this.http.get<org[]>(this.orgUrl);
+    return this.http.get<mstStore[]>(this.orgUrl);
   }
 }

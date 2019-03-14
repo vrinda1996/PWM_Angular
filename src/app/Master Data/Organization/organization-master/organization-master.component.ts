@@ -2,7 +2,7 @@ import { Component, OnInit , ViewChild, NgModule} from '@angular/core';
 import {OrganizationMasterService} from './organization-master.service';
 import { Router } from '@angular/router';
 import {MatPaginator,MatTableDataSource} from '@angular/material';
-import { org } from '../../../models/org';
+import {mstStore } from '../../../models/mstStore';
 
 @Component({
   selector: 'app-organization-master',
@@ -13,9 +13,9 @@ export class OrganizationMasterComponent implements OnInit {
   
   @ViewChild(MatPaginator) paginator: MatPaginator;
   length:number;
-  orgList: org[];
-  dataSource = new MatTableDataSource<org>(); 
-  orgTableColumns  :  string[] = ['Zone', 'State', 'Region', 'City', 'Site Code', 'Site Description', 'Location', 'Store Class', 'Format', 'Status'];
+  orgList: mstStore[];
+  dataSource = new MatTableDataSource<mstStore>(); 
+  orgTableColumns  :  string[] = ['zoneName', 'state', 'region', 'city', 'storeId', 'storeDesc', 'location', 'storeClass', 'format', 'isStoreBlocked'];
   pageSizeOptions:number[] = [15, 30, 45];
   constructor(private router: Router, private orgMasterService: OrganizationMasterService) {
    
@@ -33,7 +33,7 @@ export class OrganizationMasterComponent implements OnInit {
   public getorgList = () => {
     this.orgMasterService.getOrgList()
     .subscribe(res => {
-      this.dataSource.data = res as org[];
+      this.dataSource.data = res as mstStore[];
     })
   }
 
