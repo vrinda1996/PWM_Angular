@@ -4,5 +4,5 @@ export interface mch
     mcName: string;
     categoryName: string;
     subCategoryName: string;
-    isMCActive: boolean;
+    isMCActive: string;
 }

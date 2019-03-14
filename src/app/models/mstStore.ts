@@ -10,5 +10,5 @@ export interface mstStore
     locationName: string;
     storeClass: string;
     format: string;
-    isStoreBlocked: boolean;
+    isStoreBlocked: string;
 }
