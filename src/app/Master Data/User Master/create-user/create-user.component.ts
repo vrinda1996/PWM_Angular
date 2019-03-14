@@ -15,6 +15,7 @@ export class CreateUserComponent implements OnInit {
     employeeName: new FormControl(''),
     contactNumber: new FormControl(''),
     emailAddress: new FormControl(''),
+    reportingTo: new FormControl(''),
   });
   organizationForm = new FormGroup({
     organizationType: new FormControl(''),

@@ -2,6 +2,10 @@
     text-align:center;
     position: relative;
 }
+.header-img{
+    width: -webkit-fill-available;
+    opacity:0.8;
+}
 .header {
     position: absolute;
     top: 20%;
@@ -28,5 +32,5 @@
 }
 .btn{
     background-color: #89b4b5; 
-    font-size: 77%;
+    font-size: 75%;
 }
