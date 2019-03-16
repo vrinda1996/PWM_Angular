@@ -9,6 +9,7 @@ import { CategoryService} from './Master Data/category/category.service';
 import { MatTableModule,MatPaginatorModule, MatFormFieldModule,MatInputModule,MatRadioModule } from  '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { SearchUserComponent } from './Master Data/User Master/search-user/search-user.component';
@@ -146,6 +147,7 @@ import { OutwardTaskComponent } from './Promotion Execution/Promotion Set-up/Int
     MatFormFieldModule,
     MatInputModule,
     MatRadioModule,
+    MatSelectModule,
     MatButtonModule,
     FlexLayoutModule
   ],
