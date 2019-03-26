@@ -39,6 +39,7 @@ export class CreateUserComponent implements OnInit {
   constructor(private http:HttpClient) { }
 
   ngOnInit() {
+    this.getUserRoleList();
   }
 
   onSubmit() {
