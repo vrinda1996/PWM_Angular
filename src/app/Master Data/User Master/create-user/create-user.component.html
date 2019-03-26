@@ -4,36 +4,39 @@
 <form [formGroup]="employeeForm"  (ngSubmit)="onSubmit()">
 
   <ol> 
-      <li class="mat-form-field--inline">
-    <mat-form-field appearance="outline">
-        <mat-label>Existing Employee Name:</mat-label>
-        <input matInput placeholder="Existing Employee Name" formControlName="existingEmployeeName">
-    </mat-form-field>
-    <button  mat-raised-button color="primary" type="search">Search</button>
-    <button  mat-raised-button class="submitButton" color="primary" type="clear">Clear</button>
-
+    <li class="mat-form-field--inline">
+      <form [formGroup]="existingEmployeeNameForm"  (ngSubmit)="onSubmit()">
+        
+        <mat-form-field appearance="outline">
+          <mat-label>Existing Employee Name:</mat-label>
+          <input matInput placeholder="Existing Employee Name" formControlName="existingEmployeeName" required>
+        </mat-form-field>
+        
+        <button  mat-raised-button color="primary" type="search">Search</button>
+        <button  mat-raised-button class="submitButton" color="primary" type="clear">Clear</button>
+      </form>  
   </li> 
 <li class="mat-form-field--inline">
   
   <mat-form-field appearance="outline">
       <mat-label>Employee Code:</mat-label>
-      <input matInput placeholder="Employee Code" formControlName="employeeCode">
+      <input matInput placeholder="Employee Code" formControlName="employeeCode" required>
   </mat-form-field>
 
   <mat-form-field appearance="outline">
     <mat-label>Reporting To:</mat-label>
-    <input matInput placeholder="Reporting To" formControlName="reportingTo">
+    <input matInput placeholder="Reporting To" formControlName="reportingTo" required>
 </mat-form-field>        
 </li>
 <li class="mat-form-field--inline">
   <mat-form-field appearance="outline">
       <mat-label>Employee Name:</mat-label>
-      <input matInput placeholder="Employee Name" formControlName="employeeName">
+      <input matInput placeholder="Employee Name" formControlName="employeeName" required>
   </mat-form-field> 
 
   <mat-form-field appearance="outline">
       <mat-label>Contact Number:</mat-label>
-      <input matInput placeholder="Contact Number" formControlName="contactNumber">
+      <input matInput placeholder="Contact Number" formControlName="contactNumber" required>
   </mat-form-field>        
 
   <mat-radio-group style="margin-left: 25px"> 
@@ -45,7 +48,7 @@
 <li class="mat-form-field--inline">
   <mat-form-field appearance="outline">
       <mat-label>Email Address:</mat-label>
-      <input matInput placeholder="Email Address" formControlName="emailAddress">
+      <input matInput placeholder="Email Address" formControlName="emailAddress" required>
   </mat-form-field>        
   </li>
   <!-- <button  mat-raised-button class="submitButton" color="primary" type="submit">Submit</button> -->
@@ -59,7 +62,7 @@
     
           <div style="margin-left: 120px;">
             <label>Organization Type </label>
-            <mat-radio-group style="margin-left: 50px" formControlName="organizationType">
+            <mat-radio-group style="margin-left: 50px" formControlName="organizationType" required>
               <mat-radio-button value="Ho">Ho</mat-radio-button>
               <mat-radio-button value="Store">Store</mat-radio-button>
               <mat-radio-button value="Zone">Zone</mat-radio-button>
@@ -106,7 +109,7 @@
               <mat-select placeholder="User Role" [formControl]="userRoleControl" required onload="getUserRoleList">
                 <mat-option>--</mat-option>
                 <mat-option *ngFor="let user of userRoles" [value]="user">
-                  {{user.name}}
+                  {{user}}
                 </mat-option>
               </mat-select>
               <mat-error *ngIf="userRoleControl.hasError('required')">Please choose an user</mat-error>     

@@ -9,11 +9,10 @@
 <div>
 <div class="btn-group" dropdown [autoClose]="true" container="body">
   <button id="button-nested" dropdownToggle type="button" class="btn btn-default dropdown-toggle"
-    aria-controls="dropdown-nested">
-    Master Data<span class="caret"></span>
+    aria-controls="dropdown-nested">Master Data<span class="caret"></span>
   </button>
   <ul id="dropdown-nested" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-nested">
-    <li role="menuitem" dropdown triggers="mouseover" placement="right" container="body">
+    <li role="menuitem" dropdown triggers="mouseover"  placement="right" container="body">
       <a dropdownToggle class="dropdown-item dropdown-toggle" (click)="false">User Master<span class="caret"></span></a>
       <ul *dropdownMenu class="dropdown-menu" role="menu">
         <li role="menuitem"><a class="dropdown-item" [routerLink]="'/createUser'">Creation</a></li>

@@ -16,7 +16,6 @@ export interface UserRole {
 export class CreateUserComponent implements OnInit {
 
   employeeForm = new FormGroup({
-    existingEmployeeName: new FormControl(''),
     employeeCode: new FormControl(''),
     employeeName: new FormControl(''),
     contactNumber: new FormControl(''),
@@ -33,6 +32,9 @@ export class CreateUserComponent implements OnInit {
     zone: new FormControl({ value: 'zone', disabled: true}),
   });
  
+  existingEmployeeNameForm = new FormGroup({
+    existingEmployeeName: new FormControl(''),
+  });
   userRoleControl= new FormControl('', [Validators.required]);
   public userRoles = [];
 
@@ -43,14 +45,12 @@ export class CreateUserComponent implements OnInit {
   }
 
   onSubmit() {
-    console.warn(this.employeeForm.value);
   }
   private userRoleUrl = 'http://localhost:8082/roleAPI/getRole';
 
   public getUserRoleList() {
     console.log("res");
     return this.http.get<UserRole[]>(this.userRoleUrl).subscribe((res : any[])=>{
-      console.log(res);
       this.userRoles = res;
     });
   }
