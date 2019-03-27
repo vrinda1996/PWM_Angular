@@ -2,19 +2,16 @@
 <h3 class = "thodaNiche">Personal Details</h3>
 
 <form [formGroup]="employeeForm"  (ngSubmit)="onSubmit()">
-
   <ol> 
     <li class="mat-form-field--inline">
-      <form [formGroup]="existingEmployeeNameForm"  (ngSubmit)="onSubmit()">
         
         <mat-form-field appearance="outline">
           <mat-label>Existing Employee Name:</mat-label>
           <input matInput placeholder="Existing Employee Name" formControlName="existingEmployeeName" required>
         </mat-form-field>
-        
         <button  mat-raised-button color="primary" type="search">Search</button>
         <button  mat-raised-button class="submitButton" color="primary" type="clear">Clear</button>
-      </form>  
+      
   </li> 
 <li class="mat-form-field--inline">
   
@@ -25,7 +22,7 @@
 
   <mat-form-field appearance="outline">
     <mat-label>Reporting To:</mat-label>
-    <input matInput placeholder="Reporting To" formControlName="reportingTo" required>
+    <input matInput placeholder="Reporting To" formControlName="reportingTo" >
 </mat-form-field>        
 </li>
 <li class="mat-form-field--inline">
@@ -39,14 +36,14 @@
       <input matInput placeholder="Contact Number" formControlName="contactNumber" required>
   </mat-form-field>        
 
-  <mat-radio-group style="margin-left: 25px"> 
+  <mat-radio-group style="margin-left: 25px" > 
     <mat-radio-button value="unblock">Unblock</mat-radio-button>
     <mat-radio-button value="block">Block</mat-radio-button>
   </mat-radio-group>
 
 </li>
 <li class="mat-form-field--inline">
-  <mat-form-field appearance="outline">
+  <mat-form-field appearance="outline"> 
       <mat-label>Email Address:</mat-label>
       <input matInput placeholder="Email Address" formControlName="emailAddress" required>
   </mat-form-field>        
@@ -59,7 +56,6 @@
     <h3>Organization Details</h3>
   
   <form [formGroup]="organizationForm"  (ngSubmit)="onSubmit()">
-    
           <div style="margin-left: 120px;">
             <label>Organization Type </label>
             <mat-radio-group style="margin-left: 50px" formControlName="organizationType" required>
@@ -68,6 +64,68 @@
               <mat-radio-button value="Zone">Zone</mat-radio-button>
             </mat-radio-group>
           </div>
+          
+        <ol> 
+          <li class="mat-form-field--inline"  class="hide">
+                  <mat-form-field >
+                    <mat-select placeholder="Ho Site Code" [formControl]="hoSiteCodeControl" required onload="getHoSiteCodeList">
+                      <mat-option>Ho Site Code</mat-option>
+                      <mat-option *ngFor="let siteCode of hoSiteCode" [value]="siteCode">
+                        {{siteCode}}
+                      </mat-option>
+                    </mat-select>
+                    <mat-error *ngIf="hoSiteCodeControl.hasError('required')">Please choose an HoSiteCode</mat-error>     
+                </mat-form-field>
+            </li>
+            <li class="mat-form-field--inline"  class="hide">
+              <mat-form-field >
+                <mat-select placeholder="Store Site Code" [formControl]="storeSiteCodeControl" required onload="getStoreSiteCodeList">
+                  <mat-option>Store Site Code</mat-option>
+                  <mat-option *ngFor="let siteCode of storeSiteCode" [value]="siteCode">
+                    {{siteCode}}
+                  </mat-option>
+                </mat-select>
+                <mat-error *ngIf="storeSiteCodeControl.hasError('required')">Please choose an StoreSiteCode</mat-error>     
+            </mat-form-field>
+        </li>
+        <li class="mat-form-field--inline">
+                <mat-form-field>
+                  <mat-select placeholder="Format" [formControl]="formatControl" required onload="getFormatList">
+                    <mat-option>Select Format</mat-option>
+                    <mat-option *ngFor="let format of formatList" [value]="format">
+                      {{format}}
+                    </mat-option>
+                  </mat-select>
+                  <mat-error *ngIf="formatControl.hasError('required')">Please choose an format</mat-error>     
+              </mat-form-field>
+          </li>
+          <li class="mat-form-field--inline"  class="hide">
+            <mat-form-field >
+              <mat-select placeholder="Zone Site Code" [formControl]="zoneSiteCodeControl" required onload="getZoneSiteCode">
+                <mat-option>Select Zone Site Code</mat-option>
+                <mat-option *ngFor="let siteCode of zoneSiteCode" [value]="siteCode">
+                  {{siteCode}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="zoneSiteCodeControl.hasError('required')">Please choose an siteCode</mat-error>     
+          </mat-form-field>
+          </li>
+          <li class="mat-form-field--inline" class = "hide">
+            <mat-form-field>
+              <mat-select placeholder="Description" [formControl]="descriptionControl" required onload="getDescriptionList">
+                <mat-option>Select Zone Site Description</mat-option>
+                <mat-option *ngFor="let description of descriptionList" [value]="description">
+                  {{description}}
+                </mat-option>
+              </mat-select>
+              <mat-error *ngIf="descriptionControl.hasError('required')">Please choose an Description</mat-error>     
+          </mat-form-field>
+      </li>
+      </ol>
+
+
+
+
     <ol style="margin-top: 25px"> 
       <li class="mat-form-field--inline">
         <mat-form-field appearance="outline">
@@ -99,8 +157,6 @@
     </li>
     <!-- <button  mat-raised-button class="submitButton" color="primary" type="submit">Submit</button> -->
   </ol>
-  </form>
- 
   <h3>Role Details</h3>
   
     <ol> 
@@ -116,5 +172,7 @@
           </mat-form-field>
         </li>
       </ol>
-
-    </div>
+        <button  mat-raised-button class="formButton" color="primary" type="Create">Create</button>
+        <button  mat-raised-button class="submitButton" color="primary" type="Update">Update</button>
+      </form>
+</div>

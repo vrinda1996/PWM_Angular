@@ -23,6 +23,9 @@
 .submitButton{
   margin-left: 75px;
 }
+.formButton{
+  margin-left: 350px;
+}
 .mat-form-field--inline .mat-form-field {
   display: inline-block;
   vertical-align: middle;
@@ -39,4 +42,10 @@ ul.nav li.dropdown:hover ul.dropdown-menu {
 }
 .mat-radio-button ~ .mat-radio-button {
   margin-left: 16px;
+}
+.hide{
+  display: none;
+}
+.show{
+  display: block;
 }
